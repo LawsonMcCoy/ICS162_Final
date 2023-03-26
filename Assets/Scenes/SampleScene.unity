@@ -136,7 +136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3066546dc9c9ea49cb8343aed462156c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.664462
+      value: 2.33
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3066546dc9c9ea49cb8343aed462156c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -144,7 +144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3066546dc9c9ea49cb8343aed462156c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.7162056
+      value: 2.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3066546dc9c9ea49cb8343aed462156c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -595,7 +595,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 1206518378}
-  collider: {fileID: 1206518379}
+  collider: {fileID: 1206518392}
   playerInput: {fileID: 1206518389}
   spawn: {x: 0, y: 0, z: 0}
   spawnNumber: 0
@@ -617,20 +617,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &1206518379
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1206518373}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.3
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!114 &1206518380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -656,11 +642,11 @@ MonoBehaviour:
   coefficientOfDrag: 0.1
   dragScalingValues: {x: 5, y: 5, z: 1}
   absoluteWindRateOfChange: 0
-  walkSpeed: 15
+  walkSpeed: 8
   turnSpeed: 5
-  jumpForceVertical: 8
-  jumpForceHonrizontal: 3.5
-  jumpForceStationary: 11
+  jumpForceVertical: 6
+  jumpForceHonrizontal: 3
+  jumpForceStationary: 8
   staminaRegainRate: 10
   dashJumpForce: 15
   walkingDampingCoefficient: 10
@@ -691,13 +677,13 @@ MonoBehaviour:
   coefficientOfDrag: 0.5
   dragScalingValues: {x: 0.5, y: 3, z: 0.5}
   absoluteWindRateOfChange: 30
-  hoverSpeed: 18
+  hoverSpeed: 10
   turnSpeed: 5
   passiveStaminaLostRate: 10
   hoveringDampingCoefficient: 5
   alternateHover: 1
   hoverFallBase: 2
-  hoverFallExponent: 1.35
+  hoverFallExponent: 1.1
   hoverRecoveryRate: 2
   walkModeHoverPunishment: 2
 --- !u!114 &1206518382
@@ -5605,6 +5591,19 @@ MonoBehaviour:
   maxResource: 10
   shakeDuration: 0.7
   shakeDistance: 5
+--- !u!65 &1206518392
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206518373}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.8238406, z: 0.34399366}
+  m_Center: {x: 0.005375266, y: 0.40519744, z: -0.02945137}
 --- !u!1001 &1260371084
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5692,7 +5691,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1435551385
 MonoBehaviour:
@@ -5827,6 +5826,7 @@ GameObject:
   - component: {fileID: 2121501894}
   - component: {fileID: 2121501893}
   - component: {fileID: 2121501892}
+  - component: {fileID: 2121501907}
   m_Layer: 0
   m_Name: Fake_Ika
   m_TagString: Untagged
@@ -5898,7 +5898,7 @@ MonoBehaviour:
   - {fileID: 2121501894}
   stamina: {fileID: 2121501893}
   windManager: {fileID: 2121501897}
-  animator: {fileID: 0}
+  animator: {fileID: 2121501907}
   animatorSpeed: Speed
   animatorJump: Jump
   coefficientOfDrag: 0.1
@@ -5947,7 +5947,7 @@ MonoBehaviour:
   - {fileID: 2121501894}
   stamina: {fileID: 2121501893}
   windManager: {fileID: 2121501897}
-  animator: {fileID: 0}
+  animator: {fileID: 2121501907}
   animatorSpeed: Speed
   animatorJump: Jump
   coefficientOfDrag: 0.5
@@ -5981,7 +5981,7 @@ MonoBehaviour:
   - {fileID: 2121501894}
   stamina: {fileID: 2121501893}
   windManager: {fileID: 2121501897}
-  animator: {fileID: 0}
+  animator: {fileID: 2121501907}
   animatorSpeed: Speed
   animatorJump: Jump
   coefficientOfDrag: 0.1
@@ -10919,5 +10919,26 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2121501907
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2121501891}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
