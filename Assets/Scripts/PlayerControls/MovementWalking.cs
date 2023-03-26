@@ -229,6 +229,9 @@ public class MovementWalking : MovementMode
                     //On Ground, jump into the air
                     if (input.isPressed)
                     {
+                        //trigger animation for jumping
+                        animator.SetTrigger(animatorJump);
+
                         Vector3 jumpForceVector; //A vector that will represent the force the player
                                                  //is jumping with
 

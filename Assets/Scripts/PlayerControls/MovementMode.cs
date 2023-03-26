@@ -20,6 +20,11 @@ public abstract class MovementMode : MonoBehaviour
     [SerializeField] protected StaminaManager stamina; //A reference to the stamina manager for the player
     [SerializeField] private AbsoluteWindManager windManager; //A reference to the component responsible for maintaining the wind
 
+    //Animation
+    [SerializeField] protected Animator animator;
+    [SerializeField] protected string animatorSpeed = "Speed";
+    [SerializeField] protected string animatorJump = "Jump";
+
     //an enum for the movement modes define in the order 
     //walking, hovering, and flying, so that there int values
     //matches the index of the corresponding movement mode in 
@@ -137,6 +142,9 @@ public abstract class MovementMode : MonoBehaviour
 
         //apply the drag force
         AddForce(drag, ForceMode.Force);
+
+        //Update the animation properties
+        animator.SetFloat(animatorSpeed, self.rigidbody.velocity.magnitude);
     }
 
     // private void OnTriggerEnter(Collider triggered)
@@ -182,7 +190,7 @@ public abstract class MovementMode : MonoBehaviour
         {
             //enable new movement mode
             movementModes[(int)transitionToMode].enabled = true;
-            
+
             //disable current mode
             this.enabled = false;
         }

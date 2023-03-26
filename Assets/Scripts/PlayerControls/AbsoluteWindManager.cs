@@ -23,7 +23,7 @@ public class AbsoluteWindManager : MonoBehaviour
         {
             absoluteWind += windTunnels[tunnelIndex].getWindValue();
         }
-        Debug.Log($"absolute wind {absoluteWind}");
+        // Debug.Log($"absolute wind {absoluteWind}");
     }
 
     private void OnTriggerEnter(Collider triggered)

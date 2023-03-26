@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine;
 
-// [RequireComponent(typeof(PlayerHealth))]
+[RequireComponent(typeof(PlayerHealth))]
 // [RequireComponent(typeof(PlayerAttack))]
 
 public class Player : CombatEntity
