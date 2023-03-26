@@ -34,6 +34,9 @@ public class MovementHovering : MovementMode
 
     protected override void OnEnable()
     {
+        //update the animator
+        animator.SetBool(animatorHover, true);
+
         base.OnEnable();
 
         StartCoroutine(DelayInput());
@@ -63,6 +66,12 @@ public class MovementHovering : MovementMode
             verticalStopScaleFactor -=self.rigidbody.velocity.y;
         }
         AddForce(verticalStopScaleFactor * Vector3.up, ForceMode.Impulse);
+    }
+
+    private void OnDisable()
+    {
+        //update the animator
+        animator.SetBool(animatorHover, false);
     }
 
     protected override void FixedUpdate()
@@ -112,6 +121,9 @@ public class MovementHovering : MovementMode
         //if you land on the ground then transition to walking
         if (IsGrounded())
         {
+            //trigger land animation
+            animator.SetTrigger(animatorLand);
+
             //reset the hover time when the player touches the ground
             hoverTime = 0f;
 

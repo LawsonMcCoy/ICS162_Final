@@ -24,6 +24,10 @@ public abstract class MovementMode : MonoBehaviour
     [SerializeField] protected Animator animator;
     [SerializeField] protected string animatorSpeed = "Speed";
     [SerializeField] protected string animatorJump = "Jump";
+    [SerializeField] protected string animatorLand = "Land";
+    [SerializeField] protected string animatorHover = "isHovering";
+    [SerializeField] protected string animatorMoveForward = "MoveForward";
+    [SerializeField] protected string animatorMoveRight = "MoveRight";
 
     //an enum for the movement modes define in the order 
     //walking, hovering, and flying, so that there int values
@@ -116,6 +120,10 @@ public abstract class MovementMode : MonoBehaviour
 
     protected virtual void FixedUpdate()
     {
+        //Update animator with inputs
+        animator.SetFloat(animatorMoveRight, wasdInput.x);
+        animator.SetFloat(animatorMoveForward, wasdInput.y);
+
         //update the moveVector
         moveVector = wasdInput.x * speed * this.transform.right + wasdInput.y * speed * this.transform.forward;
 
