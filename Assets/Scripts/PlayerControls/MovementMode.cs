@@ -28,6 +28,8 @@ public abstract class MovementMode : MonoBehaviour
     [SerializeField] protected string animatorHover = "isHovering";
     [SerializeField] protected string animatorMoveForward = "MoveForward";
     [SerializeField] protected string animatorMoveRight = "MoveRight";
+    [SerializeField] protected string animatorSpeedForward = "SpeedForward";
+    [SerializeField] protected string animatorSpeedRight = "SpeedRight";
 
     //an enum for the movement modes define in the order 
     //walking, hovering, and flying, so that there int values
@@ -153,6 +155,9 @@ public abstract class MovementMode : MonoBehaviour
 
         //Update the animation properties
         animator.SetFloat(animatorSpeed, self.rigidbody.velocity.magnitude);
+        Vector3 localVelocity = Quaternion.Inverse(self.rigidbody.rotation) * self.rigidbody.velocity;
+        animator.SetFloat(animatorSpeedForward, localVelocity.z);
+        animator.SetFloat(animatorSpeedRight, localVelocity.x);
     }
 
     // private void OnTriggerEnter(Collider triggered)
