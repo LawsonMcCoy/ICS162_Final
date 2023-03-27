@@ -10,7 +10,7 @@ public class DoorManager : MonoBehaviour
     private bool isOpen = false;
 
     [SerializeField] private Player player;
-    [SerializeField] private float interactDistance = 30.0f;
+    [SerializeField] private float interactDistance = 5.5f;
 
     private void Update()
     {

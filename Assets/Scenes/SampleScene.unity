@@ -300,6 +300,49 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3066546dc9c9ea49cb8343aed462156c, type: 3}
+--- !u!1 &366035537 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1375885434342902998, guid: d8b2dcb328cb4e54889975a9d54b8a67, type: 3}
+  m_PrefabInstance: {fileID: 937079849}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &366035539
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366035537}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f772c79901184beb6b2c8cd41a02a601, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &366035540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366035537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60dd146eb07ddb09abeda2fd9efeb89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorAnimator: {fileID: 366035539}
+  openStateName: Open
+  closeStateName: Close
+  player: {fileID: 1206518376}
+  interactDistance: 5.5
 --- !u!1 &582512873 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c41b176205396a14883d6f715ef442f0, type: 3}
@@ -482,6 +525,49 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8b2dcb328cb4e54889975a9d54b8a67, type: 3}
+--- !u!1 &963040894 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1375885434143140757, guid: d8b2dcb328cb4e54889975a9d54b8a67, type: 3}
+  m_PrefabInstance: {fileID: 937079849}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &963040896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963040894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60dd146eb07ddb09abeda2fd9efeb89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorAnimator: {fileID: 963040897}
+  openStateName: Open
+  closeStateName: Close
+  player: {fileID: 1206518376}
+  interactDistance: 5.5
+--- !u!95 &963040897
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963040894}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f772c79901184beb6b2c8cd41a02a601, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -5792,7 +5878,7 @@ MonoBehaviour:
   openStateName: Open
   closeStateName: Close
   player: {fileID: 1206518376}
-  interactDistance: 30
+  interactDistance: 5.5
 --- !u!95 &2038721472
 Animator:
   serializedVersion: 5
