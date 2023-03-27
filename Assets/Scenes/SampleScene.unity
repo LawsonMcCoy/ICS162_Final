@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571328, b: 0.3069218, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -573,7 +573,7 @@ Animator:
   m_Avatar: {fileID: 9000000, guid: 3066546dc9c9ea49cb8343aed462156c, type: 3}
   m_Controller: {fileID: 9100000, guid: a3a9ef2e1e115634392ad3c5685c90ec, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 1
+  m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -599,7 +599,7 @@ MonoBehaviour:
   playerInput: {fileID: 1206518389}
   spawn: {x: 0, y: 0, z: 0}
   spawnNumber: 0
-  yDeathDistance: -20
+  yDeathDistance: -40
   positionToCenterDistance: 0
 --- !u!54 &1206518378
 Rigidbody:
@@ -639,6 +639,10 @@ MonoBehaviour:
   animator: {fileID: 1206518375}
   animatorSpeed: Speed
   animatorJump: Jump
+  animatorLand: Land
+  animatorHover: isHovering
+  animatorMoveForward: MoveForward
+  animatorMoveRight: MoveRight
   coefficientOfDrag: 0.1
   dragScalingValues: {x: 5, y: 5, z: 1}
   absoluteWindRateOfChange: 0
@@ -674,6 +678,10 @@ MonoBehaviour:
   animator: {fileID: 1206518375}
   animatorSpeed: Speed
   animatorJump: Jump
+  animatorLand: Land
+  animatorHover: isHovering
+  animatorMoveForward: MoveForward
+  animatorMoveRight: MoveRight
   coefficientOfDrag: 0.5
   dragScalingValues: {x: 0.5, y: 3, z: 0.5}
   absoluteWindRateOfChange: 30
@@ -708,6 +716,10 @@ MonoBehaviour:
   animator: {fileID: 1206518375}
   animatorSpeed: Speed
   animatorJump: Jump
+  animatorLand: Land
+  animatorHover: isHovering
+  animatorMoveForward: MoveForward
+  animatorMoveRight: MoveRight
   coefficientOfDrag: 0.1
   dragScalingValues: {x: 5, y: 7, z: 1}
   absoluteWindRateOfChange: 40
@@ -5901,6 +5913,10 @@ MonoBehaviour:
   animator: {fileID: 2121501907}
   animatorSpeed: Speed
   animatorJump: Jump
+  animatorLand: Land
+  animatorHover: isHovering
+  animatorMoveForward: MoveForward
+  animatorMoveRight: MoveRight
   coefficientOfDrag: 0.1
   dragScalingValues: {x: 5, y: 7, z: 1}
   absoluteWindRateOfChange: 40
@@ -5950,6 +5966,10 @@ MonoBehaviour:
   animator: {fileID: 2121501907}
   animatorSpeed: Speed
   animatorJump: Jump
+  animatorLand: Land
+  animatorHover: isHovering
+  animatorMoveForward: MoveForward
+  animatorMoveRight: MoveRight
   coefficientOfDrag: 0.5
   dragScalingValues: {x: 0.5, y: 3, z: 0.5}
   absoluteWindRateOfChange: 30
@@ -5984,6 +6004,10 @@ MonoBehaviour:
   animator: {fileID: 2121501907}
   animatorSpeed: Speed
   animatorJump: Jump
+  animatorLand: Land
+  animatorHover: isHovering
+  animatorMoveForward: MoveForward
+  animatorMoveRight: MoveRight
   coefficientOfDrag: 0.1
   dragScalingValues: {x: 5, y: 5, z: 1}
   absoluteWindRateOfChange: 0
